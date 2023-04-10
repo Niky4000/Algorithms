@@ -1,3 +1,9 @@
-/home/me/GIT/UsefulUtils/projects/ibs/TestMultithreading/src/main/java/ru/ibs/testmultithreading/collections/CollectionTests.java
-/home/me/GIT/UsefulUtils/projects/ibs/TestMultithreading/src/main/java/ru/ibs/testmultithreading/TestMultithreadingStart.java
-/home/me/GIT/UsefulUtils/projects/ibs/TestMultithreading/src/main/java/ru/ibs/testmultithreading/utils/ThreadUtils.java
+/home/me/GIT/Algorithms/TestMultithreading/src/main/java/ru/ibs/testmultithreading/collections/LocksTests.java
+/home/me/GIT/Algorithms/TestMultithreading/src/main/java/ru/ibs/sortings/QuickSort.java
+/home/me/GIT/Algorithms/TestMultithreading/src/main/java/ru/ibs/sortings/BucketSort.java
+/home/me/GIT/Algorithms/TestMultithreading/src/main/java/ru/ibs/testmultithreading/utils/ThreadUtils.java
+/home/me/GIT/Algorithms/TestMultithreading/src/main/java/ru/ibs/testmultithreading/collections/CollectionTests.java
+/home/me/GIT/Algorithms/TestMultithreading/src/main/java/ru/ibs/sortings/CountingSort.java
+/home/me/GIT/Algorithms/TestMultithreading/src/main/java/ru/ibs/testmultithreading/collections/AtomicsTests.java
+/home/me/GIT/Algorithms/TestMultithreading/src/main/java/ru/ibs/testmultithreading/TestMultithreadingStart.java
+/home/me/GIT/Algorithms/TestMultithreading/src/main/java/ru/ibs/sortings/RadixSort.java

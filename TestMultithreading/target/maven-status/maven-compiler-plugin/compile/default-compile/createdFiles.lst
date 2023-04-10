@@ -1,3 +1,11 @@
+ru/ibs/sortings/CountingSort.class
 ru/ibs/testmultithreading/TestMultithreadingStart.class
+ru/ibs/testmultithreading/collections/AtomicsTests.class
+ru/ibs/sortings/BucketSort.class
+ru/ibs/testmultithreading/collections/LocksTests$1WorkerThread.class
+ru/ibs/sortings/RadixSort.class
+ru/ibs/testmultithreading/collections/LocksTests$1ManagerThread.class
 ru/ibs/testmultithreading/utils/ThreadUtils.class
+ru/ibs/sortings/QuickSort.class
+ru/ibs/testmultithreading/collections/LocksTests.class
 ru/ibs/testmultithreading/collections/CollectionTests.class
