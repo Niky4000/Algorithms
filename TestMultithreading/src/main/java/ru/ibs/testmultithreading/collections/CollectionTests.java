@@ -19,8 +19,6 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.LinkedTransferQueue;
 import java.util.concurrent.PriorityBlockingQueue;
 import java.util.concurrent.SynchronousQueue;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import ru.ibs.testmultithreading.utils.ThreadUtils;
 
 public class CollectionTests {
