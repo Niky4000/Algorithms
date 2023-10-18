@@ -4,7 +4,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
@@ -188,6 +190,58 @@ public class LocksTests {
 		new ManagerThread("ManagerThread").start();
 	}
 
+	public void testLockOnCollection() throws InterruptedException {
+		Map<String, String> map = new HashMap<>();
+		Thread thread1 = ThreadUtils.createThread(() -> {
+			System.out.println("Thread1 started!");
+			synchronized (map) {
+				map.put("2", "2");
+				System.out.println("Thread1 puts data!");
+				ThreadUtils.waitSomeTime(10);
+			}
+		});
+		Thread thread2 = ThreadUtils.createThread(() -> {
+			System.out.println("Thread2 started!");
+			synchronized (map) {
+				map.put("4", "4");
+				System.out.println("Thread2 puts data!");
+				ThreadUtils.waitSomeTime(10);
+			}
+		});
+		thread1.join();
+		thread2.join();
+		System.out.println(map);
+	}
+
+	Long digit = 0L;
+
+	public void testLockOnPrimitive() throws InterruptedException {
+		Thread thread1 = ThreadUtils.createThread(() -> {
+			System.out.println("Thread1 started!");
+			synchronized (digit) {
+				ThreadUtils.waitSomeTime(4);
+				for (int i = 0; i < 100; i++) {
+					digit++;
+				}
+				System.out.println("Thread1 puts data!");
+				ThreadUtils.waitSomeTime(4);
+			}
+		});
+		Thread thread2 = ThreadUtils.createThread(() -> {
+			System.out.println("Thread2 started!");
+			synchronized (digit) {
+				ThreadUtils.waitSomeTime(4);
+				for (int i = 0; i < 300; i++) {
+					digit++;
+				}
+				System.out.println("Thread2 puts data!");
+				ThreadUtils.waitSomeTime(4);
+			}
+		});
+		thread1.join();
+		thread2.join();
+		System.out.println(digit);
+	}
 //	public void testStampedLock() {
 //		StampedLock lock = new StampedLock();
 //		Date date = new Date();
